@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+	
+	<head>
+		<meta charset='utf-8'>
+		<title>Mars - surface waves</title>
+		<link rel='stylesheet' href='../mars-distance/style.css'>
+	</head>
+	
+	<body background='../mars-distance/background.jpg'>
+		
+		<div id='container'>
+		
+		<div class='highlight'>
+		<h1>The Distance between Two Points on Mars</h1>
+		
+		<p>
+		The location of the InSight lander will be determined when it touches down in terms of its martian latitude and longitude.
+		A marsquake or the impact of a meteor will occur at some other spot on Mars, also given by its latitude and longitude.
+		This program calculates how far apart these two spots are from each other by setting their latitudes and longitudes.
+		</p>
+		
+		<p>
+		Drag the impact/marsquake site on the Mars map.
+		The box below the map shows the latitudes, longitudes, and calculated distance.
+		You can also set latitudes and longitudes by editing the "distance computation code" below.
+		</p>
+		
+		</div>
+		
+		<div id='overlay-outer'>
+			<div id='map-preloader' class='overlay preloader'></div>
+			<div class='overlay' id='map'></div>
+			<div class='overlay' id="map-legend"></div>
+		</div>
+		
+		<div class='highlight'>
+		<p>
+		Distance between lander ($L$) and impact site ($I$):
+		<p>
+		<p style='margin-left: 40px'>
+		$d = D \cos^{-1}(\sin(L_y)\sin(I_y) + \cos(L_y)\cos(I_y)\cos(I_x-L_x))$ = <span id='distance'></span>
+		</p>
+		where
+		<ul>
+		<li>$D$ = 3390 km
+		<li>$(L_x, L_y)$ = longitude/latitude of lander = (<span id='lander-long'></span>, <span id='lander-lat'></span>)
+		<li>$(I_x, I_y)$ = longitude/latitude of impact site = (<span id='impact-long'></span>, <span id='impact-lat'></span>)
+		</ul>
+		</div>
+		
+		<a id='distance-toggle' href=''>Show distance computation code</a><br>
+		
+		<div id='distance-code'>
+		<div class="left-col">
+			<div data-file="setlocation.coffee"></div>
+		</div>
+		<div class="right-col">
+			<div data-eval="setlocation.coffee"></div>
+		</div>
+	    <div class="clear"></div>
+		<div class="left-col">
+			<div data-file="distance.coffee"></div>
+		</div>    
+		<div class="right-col">
+			<div data-eval="distance.coffee"></div>
+		</div>
+	    <div class="clear"></div>
+		</div>
+		
+		<a href='//github.com/spacemath/mars-distance'>GitHub source</a>
+		
+		<p class="footnote">
+		This web page is adapted from <a href="http://spacemath.gsfc.nasa.gov/ILabs.html">Space Math @ NASA ILabs</a>.
+		</p>
+		
+		<p class="footnote">
+		Background image taken by Mars Reconnaissance Orbiter<br>
+		HiRISe camera on March 2010
+		</p>
+		
+		</div> <!--container-->
+		
+		<script>blabBasic=true;</script>
+		<!--script src="../puzlet/puzlet/js/puzlet.js"></script-->
+		<script src="http://puzlet.org/puzlet/js/puzlet.js"></script>
+		
+	</body>
+
+</html>

@@ -1,6 +1,8 @@
 [
 	"http://puzlet.org/puzlet/js/d3.min.js",
+	"../mars-distance/code-widget.coffee",
 	"../mars-distance/graphics.coffee",
 	"../mars-distance/distance.coffee",
-    "../mars-distance/setlocation.coffee"
+    "../mars-distance/setlocation.coffee",
+	"main.coffee"
 ]

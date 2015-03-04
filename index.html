@@ -15,20 +15,23 @@
 		<h1>Arrival Times for Martian Surface Waves</h1>
 		
 		<p>
-		THIS PAGE IS UNDER CONSTRUCTION.<br>
-		Based on <a href='../mars-distance'>Mars distance module</a>
+		===THIS PAGE IS UNDER CONSTRUCTION===<br>
 		</p>
 		
 		<p>
-		The location of the InSight lander will be determined when it touches down in terms of its martian latitude and longitude.
-		A marsquake or the impact of a meteor will occur at some other spot on Mars, also given by its latitude and longitude.
-		This program calculates how far apart these two spots are from each other by setting their latitudes and longitudes.
+		The InSight seismometer will detect the arrival of marsquake or meteor impact seismic waves.<br>
+		These waves, like the ripples of water from a stone dropped in a pond, travel on the surface of Mars.<br>
+		There are two waves that travel around Mars called Rayleigh 1 and Rayleigh 2.<br>
+		The R1 wave arrives first, and the R2 wave travels a longer distance and arrives next.<br>
+		These waves can also continue to travel around Mars back to the seismometer and are then called R3 and R4.
+		</p>
+		<p>
+		This program calculates how long these Rayleigh waves take to reach the InSight seismometer.<br>
 		</p>
 		
 		<p>
 		Drag the impact/marsquake site on the Mars map.
 		The box below the map shows the latitudes, longitudes, and calculated distance.
-		You can also set latitudes and longitudes by editing the "distance computation code" below.
 		</p>
 		
 		</div>
@@ -41,20 +44,14 @@
 		
 		<div class='highlight'>
 		<p>
-		Distance between lander ($L$) and impact site ($I$):
-		<p>
-		<p style='margin-left: 40px'>
-		$d = D \cos^{-1}(\sin(L_y)\sin(I_y) + \cos(L_y)\cos(I_y)\cos(I_x-L_x))$ = <span id='distance'></span>
-		</p>
-		where
 		<ul>
-		<li>$D$ = 3390 km
-		<li>$(L_x, L_y)$ = longitude/latitude of lander = (<span id='lander-long'></span>, <span id='lander-lat'></span>)
-		<li>$(I_x, I_y)$ = longitude/latitude of impact site = (<span id='impact-long'></span>, <span id='impact-lat'></span>)
+		<li>Longitude/latitude of lander: <span id='lander-long'></span>, <span id='lander-lat'></span>
+		<li>Longitude/latitude of impact site: <span id='impact-long'></span>, <span id='impact-lat'></span>
+		<li>Distance between lander and impact site: <span id='distance'></span>
 		</ul>
 		</div>
 		
-		<a id='distance-toggle' href=''>Show distance computation code</a><br>
+		<a id='distance-toggle' href=''>Show lander/impact location code</a><br>
 		
 		<div id='distance-code'>
 		<div class="left-col">
@@ -64,21 +61,15 @@
 			<div data-eval="../mars-distance/setlocation.coffee"></div>
 		</div>
 	    <div class="clear"></div>
-		<div class="left-col">
-			<div data-file="../mars-distance/distance.coffee"></div>
-		</div>    
-		<div class="right-col">
-			<div data-eval="../mars-distance/distance.coffee"></div>
-		</div>
-	    <div class="clear"></div>
+
 		</div>
 		
 		<p><a href='//github.com/spacemath/mars-surface-waves'>GitHub source</a></p>
 		
-		<p><a href='http://spacemath.github.io'>Other Space Math modules</a></p>
+		<p><a href='//spacemath.github.io'>More Space Math modules</a></p>
 		
 		<p class="footnote">
-		This web page is adapted from <a href="http://spacemath.gsfc.nasa.gov/ILabs.html">Space Math @ NASA ILabs</a>.
+		This web page is adapted from <a href="//spacemath.gsfc.nasa.gov/ILabs.html">Space Math @ NASA ILabs</a>.
 		</p>
 		
 		<p class="footnote">

@@ -1,9 +1,23 @@
-#rayleigh table {
-	
-}
-
 #rayleigh td {
 	width: 150px;
 	text-align: center;
+}
+
+#speedContainer {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+#speedSlider {
+	display: inline-block;
+	width: 150px;
+	margin-left: 6px;
+	margin-right: 10px;
+	margin-bottom: -2px;
+}
+
+#speedText {
+	display: inline-block;
+    cursor: default;
 }
 

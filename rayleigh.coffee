@@ -4,14 +4,17 @@ class Rayleigh
     v: 4.2  # Speed of surface wave (km/s)
     
     # Rayleigh waves
-    waves: (d) ->
+    waves: (@d) ->
         C = @circumference()
-        R1 = @set 1, d
+        R1 = @set 1, @d
         R2 = @set 2, C - R1.d
         R3 = @set 3, R1.d + C
         R4 = @set 4, R2.d + C
         R5 = @set 5, R3.d + C
         R6 = @set 6, R4.d + C
+    
+    # Set speed of surface wave
+    setWaveSpeed: (@v) -> @waves @d
     
     # Mars circumference
     circumference: -> 2*pi*@D

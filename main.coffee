@@ -1,10 +1,7 @@
 $blab.noGitHubRibbon = true;
 
-# Initialize
-$blab.rayleigh = {waves: (d) ->}
-
 new $blab.Canvas((canvas) -> 
-	objects = new $blab.LanderAndImpact(canvas, (o) -> $blab.rayleigh.waves(o.distance))
+	objects = new $blab.LanderAndImpact(canvas, (o) -> $blab.rayleigh?.waves(o.distance))
 	$blab.lander = objects.lander
 	$blab.impact = objects.impact
 )
@@ -25,9 +22,9 @@ class SpeedSlider
 			step: 0.1
 			value: @v
 			slide: (e, ui) => @setSpeed(ui.value)
-			change: (e, ui) ->  # Unused because responds to slide method
+			change: (e, ui) =>  # Unused because responds to slide method
 		
-		@setText @v
+		@setSpeed @v
 		
 	setSpeed: (@v) ->
 		@setText @v
@@ -38,4 +35,4 @@ class SpeedSlider
 	# API
 	set: (v) -> @container.slider("value", v)
 	
-new SpeedSlider (v) -> $blab.rayleigh.setWaveSpeed(v)
+new SpeedSlider (v) -> $blab.rayleigh?.setWaveSpeed(v)

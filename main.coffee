@@ -1,16 +1,10 @@
 $blab.noGitHubRibbon = true;
 
-class Rayleigh
-	
-	constructor: ->
-		
-	setDist: (d) ->
-		$("#distance2").html(d)
-
-rayleigh = new Rayleigh
+# Initialize
+$blab.rayleigh = {waves: (d) ->}
 
 new $blab.Canvas((canvas) -> 
-	objects = new $blab.LanderAndImpact(canvas, (o) -> rayleigh.setDist(o.distance))
+	objects = new $blab.LanderAndImpact(canvas, (o) -> $blab.rayleigh.waves(o.distance))
 	$blab.lander = objects.lander
 	$blab.impact = objects.impact
 )

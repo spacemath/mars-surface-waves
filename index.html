@@ -5,6 +5,7 @@
 		<meta charset='utf-8'>
 		<title>Mars - surface waves</title>
 		<link rel='stylesheet' href='../mars-distance/style.css'>
+		<link rel='stylesheet' href='style.css'>
 	</head>
 	
 	<body background='../resources/images/mars1.jpg'>
@@ -13,10 +14,6 @@
 		
 		<div class='highlight'>
 		<h1>Arrival Times for Martian Surface Waves</h1>
-		
-		<p>
-		===THIS PAGE IS UNDER CONSTRUCTION===<br>
-		</p>
 		
 		<p>
 		The InSight seismometer will detect the arrival of marsquake or meteor impact seismic waves.<br>
@@ -44,16 +41,33 @@
 		
 		<div class='highlight'>
 		<p>
-		<ul>
-		<li>Longitude/latitude of lander: <span id='lander-long'></span>, <span id='lander-lat'></span>
-		<li>Longitude/latitude of impact site: <span id='impact-long'></span>, <span id='impact-lat'></span>
-		<li>Distance between lander and impact site: <span id='distance'></span>
-			
-		<li>Distance confirmation: <span id='distance2'></span>
-		</ul>
+		Longitude/latitude of lander: <span id='lander-long'></span>, <span id='lander-lat'></span><br>
+		Longitude/latitude of impact site: <span id='impact-long'></span>, <span id='impact-lat'></span><br>
+		Distance between lander and impact site: <span id='distance'></span>
+		</p>
+		
+		<table id="rayleigh">
+			<th>Wave name
+			<th>Distance (km)
+			<th>Time (mins)
+			<tr><td>R1<td id='R1d'><td id='R1t'>
+			<tr><td>R2<td id='R2d'><td id='R2t'>
+			<tr><td>R3<td id='R3d'><td id='R3t'>
+			<tr><td>R4<td id='R4d'><td id='R4t'>
+			<tr><td>R5<td id='R5d'><td id='R5t'>
+			<tr><td>R6<td id='R6d'><td id='R6t'>
+		</table>
+		
+		<p class="footnote">
+		Although the surface waves R1,R2 and R3 are the only ones
+		likely to be detected, the list includes the first six possibilities.<br>
+		These surface waves are also called Rayleigh Waves because
+		they resemble the waves from a stone dropped in water.
+		</p>
+		
 		</div>
 		
-		<a id='distance-toggle' href=''>Show lander/impact location code</a><br>
+		<a id='distance-toggle' href=''>Show Rayleigh wave computation code</a><br>
 		
 		<div id='distance-code'>
 		<div class="left-col">
@@ -63,7 +77,10 @@
 			<div data-eval="../mars-distance/setlocation.coffee"></div>
 		</div>
 	    <div class="clear"></div>
-
+		<div class="left-col">
+			<div data-file="rayleigh.coffee"></div>
+		</div>
+	    <div class="clear"></div>
 		</div>
 		
 		<p><a href='//github.com/spacemath/mars-surface-waves'>GitHub source</a></p>

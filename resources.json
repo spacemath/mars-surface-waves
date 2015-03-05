@@ -3,6 +3,7 @@
 	"../mars-distance/code-widget.coffee",
 	"../mars-distance/graphics.coffee",
 	"../mars-distance/distance.coffee",
-    "../mars-distance/setlocation.coffee",
-	"main.coffee"
+	"../mars-distance/setlocation.coffee",
+	"main.coffee",
+	"rayleigh.coffee"
 ]
